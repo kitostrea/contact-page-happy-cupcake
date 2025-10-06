@@ -7,7 +7,7 @@
 		<title>The Happy Cupcake</title>
 		<meta name="description" content="The Happy Cupcake serves delicious and gorgeous cupcakes. We are located in Mesa, AZ. Our cupcakes are happy, and you will be too! Contact The Happy Cupcake using our form or contact information.">
         <!-- TO DO: Add your name to the meta author tag -->
-		<meta name="author" content="">
+		<meta name="author" content="Kit Ostrea">
 
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
         <link rel="icon" href="images/favicon.ico" type="image/x-icon">
@@ -66,12 +66,45 @@
                 </div>
             </section>
             <section id="form">
-                <h2>Contact The Happy Cupcake</h2>
-                <p>(Required items are marked with an <span class="required">*</span>)</p>
+    <h2>Contact The Happy Cupcake</h2>
+    <p>(Required items are marked with an <span class="required">*</span>)</p>
 
-                <!-- TO DO: Add the form below (be sure to include all of the attributes and widgets) -->
+        <!-- Contact Form -->
+        <form action="https://example.com/form-handler" method="post">
+            <label for="fullName"><span class="required">*</span> full name (first and last):</label>
+            <input type="text" id="fullName" name="fullName" required>
+
+            <label for="email"><span class="required">*</span> email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phoneNum"><span class="required">*</span> phone:</label>
+            <input type="tel" id="phoneNum" name="phoneNum" required>
+
+            <fieldset>
+                <legend>preferred contact method</legend>                    
+                <input type="radio" name="prefContact" id="prefEmail" value="email" checked required>
+                <label for="prefEmail">email</label>
                 
-            </section>
+                <input type="radio" name="prefContact" id="prefPhone" value="phone">
+                <label for="prefPhone">phone</label>
+            </fieldset>
+
+            <label for="date"><span class="required">*</span> date of event:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="guests"><span class="required">*</span> number of guests:</label>
+            <input type="number" id="guests" name="guests" min="1" required>
+
+            <label for="events">describe your event:</label>
+            <textarea id="events" name="events" rows="4" cols="50"></textarea>
+
+            <label for="cupcakes"><span class="required">*</span> tell us about the cupcakes you want to serve:</label>
+            <textarea id="cupcakes" name="cupcakes" rows="4" cols="50" required></textarea>
+
+            <input type="submit" name="my-submit" id="my-submit" value="Submit Form">
+        </form>
+    </section>
+
 		</main>
 
     <footer>
